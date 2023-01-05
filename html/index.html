@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TAREA INDIVIDUAL SEBASTIAN FALCONI</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="../assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css">
+    <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css">
+    <link id="theme-style" rel="stylesheet" href="../css/efectos.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2"
+                                src="../assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">Grupo<span
+                                    class="text-alt">03</span></span></a></div>
+                </div>
+                <!--//docs-logo-wrapper-->
+                <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+
+
+                    <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/"><i
+                                    class="fab fa-facebook-f fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/"><i
+                                    class="fab fa-instagram fa-fw"></i></a></li>
+                    </ul>
+                    <!--//social-list-->
+
+                </div>
+                <!--//docs-top-utilities-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//branding-->
+    </header>
+    <!--//header-->
+
+    <div class="docs-wrapper">
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+                                class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Tarea Individual</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#section-2">Diferencias XML y JSON</a></li>
+                    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">AJAX</a></li>
+                </ul>
+
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">XML</h1>
+                        <p>XML es el acrónimo de Extensible Markup Language, es decir, es un lenguaje de marcado que define un conjunto de reglas para la codificación de documentos. ¿Te parece complicado? Entonces, vamos a simplificarlo.</p>
+
+<p>El lenguaje de marcado es un conjunto de códigos que se pueden aplicar en el análisis de datos o la lectura de textos creados por computadoras o personas. El lenguaje XML proporciona una plataforma para definir elementos para crear un formato y generar un lenguaje personalizado.</p>
+
+<p>Un archivo XML se divide en dos partes: prolog y body. La parte prolog consiste en metadatos administrativos, como declaración XML, instrucción de procesamiento opcional, declaración de tipo de documento y comentarios. La parte del body se compone de dos partes: estructural y de contenido (presente en los textos simples).</p>
+
+<p>El diseño XML se centra en la simplicidad, la generalidad y la facilidad de uso y, por lo tanto, se utiliza para varios servicios web. Tanto es así que hay sistemas destinados a ayudar en la definición de lenguajes basados ​​en XML, así como APIs que ayudan en el procesamiento de datos XML - que no deben confundirse con HTML.</p>
+<h4 class="heading">Ejemplo 1</h4>
+                        
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs"> 
+function xml1(){
+var text, parser, xmlDoc;
+
+text = "&lt;bookstore>&lt;book>" +
+"&lt;title>Dato1&lt;/title>" +
+"&lt;author>Nombre&lt;/author>" +
+"&lt;year>2005&lt;/year>" +
+"&lt;/book>&lt;/bookstore>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("demo2").innerHTML =
+xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+}
+                                    
+
+</code></pre>
+
+                        </div>
+
+                        <!--//docs-code-block-->
+                        <h4 class="heading">Demo</h4>
+                        <button id="demo2" onclick="xml1()">Click Aquí</button>
+
+                        <h1 class="docs-heading">JSON</h1>
+                        <p>JSON (JavaScript Object Notation - Notación de Objetos de JavaScript) es un formato ligero de intercambio de datos. Leerlo y escribirlo es simple para humanos, mientras que para las máquinas es simple interpretarlo y generarlo. Está basado en un subconjunto del Lenguaje de Programación JavaScript, Standard ECMA-262 3rd Edition - Diciembre 1999. JSON es un formato de texto que es completamente independiente del lenguaje pero utiliza convenciones que son ampliamente conocidos por los programadores de la familia de lenguajes C, incluyendo C, C++, C#, Java, JavaScript, Perl, Python, y muchos otros. Estas propiedades hacen que JSON sea un lenguaje ideal para el intercambio de datos.</p>
+
+<p>JSON está constituído por dos estructuras:
+</p>
+
+<p>Una colección de pares de nombre/valor. En varios lenguajes esto es conocido como un objeto, registro, estructura, diccionario, tabla hash, lista de claves o un arreglo asociativo.
+Una lista ordenada de valores. En la mayoría de los lenguajes, esto se implementa como arreglos, vectores, listas o sequencias.
+Estas son estructuras universales; virtualmente todos los lenguajes de programación las soportan de una forma u otra. Es razonable que un formato de intercambio de datos que es independiente del lenguaje de programación se base en estas estructuras.
+</p>
+
+<p>En JSON, se presentan de estas formas:</p>
+<p>Un objeto es un conjunto desordenado de pares nombre/valor. Un objeto comienza con {llave de apertura y termine con }llave de cierre. Cada nombre es seguido por :dos puntos y los pares nombre/valor están separados por ,coma.</p>
+<h4 class="heading">Ejemplo 1</h4>
+                        
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs"> 
+function myFunction() {
+  var data = {
+    "data": {
+      "x": "1",
+      "y": "1",
+      "url": "http://pagina.com"
+    },
+    "event": "start",
+    "show": 1,
+    "id": 50
+  }
+
+
+  document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
+}
+                                    
+</code></pre>
+
+                        </div>
+
+                        <!--//docs-code-block-->
+                        <h4 class="heading">Demo</h4>
+                        <button id="demo3" onclick="json1()">Click Aquí</button>
+                        <pre id="json" ></pre>
+                        <div id="section-2"></div>
+                        <h1 class="docs-heading" >Tabla de Diferencias entre XML y JSON</h1>
+                        <section class="docs-intro" >
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-bordered ">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Diferencias</th>
+                                      <th scope="col">JSON</th>
+                                      <th scope="col">XML</th>
+                                      <th scope="col">SEMEJANZAS XML Y JSON</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Los objetos tienen un tipo de dato definido.</td>
+                                      <td>Los datos tienen únicamente tipo de dato String.</td>
+                                      <td>Ambos transportan datos.</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>JSON es un formato más sencillo, en comparación con XML.</td>
+                                      <td>XML es más complicado por su lenguaje más estricto.</td>
+                                      <td>Pueden ser utilizados en sitios web.</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">3</th>
+                                      <td>Es más sencillo de procesar los datos.</td>
+                                      <td>Tiene una mayor complejidad a la hora de procesar sus datos.</td>
+                                      <td>Son formatos autodescriptivos.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Genera archivos de menor tamaño.</td>
+                                        <td>Los archivos generados en XML tienen un mayor tamaño.</td>
+                                        <td>Tanto JSON como XML tienen un buen soporte para las definiciones de contenido y la validación</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">5</th>
+                                        <td>Tiene una estructura difícil de interpretar a simple vista.</td>
+                                        <td>Su estructura es simple de analizar.</td>
+                                        <td>JSON y XML pueden utilizarse para la serialización de datos</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">6</th>
+                                        <td>Únicamente es posible enviar los datos que se encuentran en su estructura, y no metadatos.</td>
+                                        <td>Este formato permite proveer mayor cantidad de datos, incluyendo metadatos.</td>
+                                        <td>Una de las similitudes más evidentes entre estas dos estructuras de datos es que JSON y XML están basadas en texto. Por ello, muchos creen que JSON se creó para ser una alternativa más sencilla a XML.</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">7</th>
+                                        <td>Es recomendado para aplicaciones con requerimientos menos complejos.</td>
+                                        <td>Es más recomendado para aplicaciones con requerimientos más complejos, como en entornos empresariales.</td>
+                                        <td>Ambos formatos tienen estructuras jerárquicas </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">8</th>
+                                        <td>JSON permite utilizar arrays (arreglos).</td>
+                                        <td>XML no permite utilizar arrays (arreglos).</td>
+                                        <td>Son las opciones más comunes de transporte de datos.</td>
+                                      </tr>
+                                      
+                                  </tbody>
+                         
+                                </table>
+                              </div>
+                            
+
+                        </section>
+                    </header>
+
+                    <section class="docs-section" id="item-1-1">
+                        <h2 class="section-heading">AJAX</h2>
+                        <p>AJAX es un conjunto de técnicas aplicadas al desarrollo web para poder procesar solicitudes al servidor de forma asíncrona, y en segundo plano. Este grupo de tecnologías se denomina así debido a su traducción en inglés Asynchronous JavaScript and XML, y esto es debido a que utiliza JavaScript y XML como sus principales tecnologías para poder funcionar como tal. Cabe recalcar que además se utiliza implícamente el DOM (Modelo de Objetos del Documento) y es común utilizar el objeto XMLHttpRequest para poder lograr la comunicación asíncrona con el servidor y el cliente.</p>
+                        <h4 class="heading">Funcionamiento AJAX</h4>
+                        <p>Funcionamiento:
+                            El usuario mediante un navegador web utiliza un sitio web que permite la comunicación mediante AJAX. Para esto, esta persona realiza una acción que genere una petición al servidor mediante una llamada de JavaScript, una vez esta petición se ejecuta se crea un HTTP-request que se envia directamente el servidor WEB o servidor XML, la cual se procesa mediante algún sistema, o tecnología que gestione los datos, como una base de datos. Una vez la petición ha sido procesada y/o manipulada, se gestiona a través del servidor web para generar una respuesta, la cual puede ser algún tipo de dato como por ejemplo: en datos de JavaScript, HTML, o en formato XML.</p>
+                        </p>
+                        <h4 class="heading">Ejemplo 1</h4>
+                        
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs"> 
+ &lt;form id="myForm">
+    &lt;input type="text" name="name" placeholder="Ingresa tu nombre" required />
+    &lt;input type="text" name="email" placeholder="Email" required />
+    &lt;input type="text" name="city" placeholder="Mensaje" required />
+    &lt;input type="submit" name="submit" value="Enviar" />
+&lt;/form>
+&lt;div id="postData">&lt;/div>
+
+</code></pre>
+<h4 class="heading">jQuery</h4>
+                        
+                        <div class="docs-code-block">
+                            <pre class="shadow-lg rounded"><code class="javascript hljs">                   
+$(document).ready(function(){
+    $('#myForm').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: "get_data.php",
+            type: "POST",
+            data: $(this).serialize(),
+            success: function(data){
+                $("#postData").html(data);
+            },
+            error: function(){
+                alert("Todavia no se implementó PHP");
+            }
+        });
+    });
+});
+</code></pre>
+
+                        </div>
+                        <!--//docs-code-block-->
+                        <h3>Demo</h3>
+                        <form id="myForm">
+    <input type="text" name="name" placeholder="Ingresa tu nombre" required />
+    <input type="text" name="email" placeholder="Email" required />
+    <input type="text" name="city" placeholder="Mensaje" required />
+    <input type="submit" name="submit" value="Enviar" />
+</form>
+<div id="postData"></div>
+
+                        <div class="callout-block callout-block-info">
+
+                            <div class="content">
+                                <h4 class="callout-title">
+                                    <span class="callout-icon-holder me-1">
+                                        <i class="fas fa-info-circle"></i>
+                                    </span>
+                                    <!--//icon-holder-->
+                                    Nota
+                                </h4>
+                                <p>El ID es una cadena que distingue entre mayúsculas y minúsculas y es única dentro del
+                                    documento; solo un elemento puede tener un ID dado.</p>
+                            </div>
+                            <!--//content-->
+                        </div>
+                    </section>
+
+                  
+
+
+                    </section>
+                    <!--//section-->
+
+                    <!--//section-->
+                    </section>
+                    <!--//section-->
+
+                    <footer class="footer">
+                        <div class="container text-center py-5">
+                            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+                            <small class="copyright">Template diseñado por <a class="theme-link"
+                                    href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley.</a></small>
+                            <ul class="social-list list-unstyled pt-4 mb-0">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/"><i
+                                            class="fab fa-facebook-f fa-fw"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/"><i
+                                            class="fab fa-instagram fa-fw"></i></a></li>
+                            </ul>
+                            <!--//social-list-->
+                        </div>
+                    </footer>
+            </div>
+        </div>
+    </div>
+    <!--//docs-wrapper-->
+
+    <!-- Javascript -->
+    <script src="../assets/plugins/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="../assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="../assets/js/highlight-custom.js"></script>
+    <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+    <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="../assets/js/docs.js"></script>
+    <script src="../assets/plugins/codigo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- SCROOLL REVEAL SCRIPT -->
+    <script>
+        window.sr = ScrollReveal();
+
+        sr.reveal('#item-1-1', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-2', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-3', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-4', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-5', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('#item-1-6', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+        sr.reveal('#item-1-7', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+        sr.reveal('.docs-header', {
+            duration: 2000,
+            origin: 'top',
+            distance: '300px'
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+    <!--- 
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>Grupo 03</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- 
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- 
+   ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!--
+	================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<style>
+	
+	</style>
+</head>
+
+<body id="top">
+
+    <!--  
+   ================================================== -->
+    <header>
+
+        <div class="header-logo">
+            <a href="#">Grupo 03</a>
+        </div>
+
+    </header> 
+
+
+    <!-- 
+   ================================================== -->
+    <section id="home">
+
+        <div class="overlay"></div>
+
+        <div class="home-content-table">
+            <div class="home-content-tablecell">
+                <div class="row">
+                    <div class="col-twelve">
+
+                        <h1 class="" style="color:white; font-size:6rem">Aplicación de Tecnologías Web</h1>
+                            <br><h5 style="color:white;">Nombre y Apellido:
+                            <br>Sebastian Falconi
+                            <h3 class="">
+                                TAREA INDIVIDUAL: XML, JSON Y AJAX <br>
+
+                                <div class="more animate-intro">
+                                    <a class="button stroke" href="html/index.html">
+                                        Parte I
+                                    </a>
+
+                                </div>
+
+                    </div> 
+                </div>
+            </div> 
+        </div>
+
+        <ul class="home-social-list">
+            <li class="animate-intro">
+                <a href="https://facebook.com/"><i class="fa fa-facebook-square"></i></a>
+            </li>
+            <li class="animate-intro">
+                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="animate-intro">
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li class="animate-intro">
+                <a href="https://behance.net/"><i class="fa fa-behance"></i></a>
+            </li>
+
+        </ul> 
+
+        <div class="scrolldown">
+            <a href="#" class="scroll-icon smoothscroll">
+                Grupo 03
+            </a>
+        </div>
+
+    </section>
+
+
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- 
+   ================================================== -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+ 
+    <script>
+        window.sr = ScrollReveal();
+
+        sr.reveal('.home-content-tablecell', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '300px'
+        });
+
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

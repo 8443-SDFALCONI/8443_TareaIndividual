@@ -1,0 +1,33 @@
+
+
+    #contentContainer {
+      width: 550px;
+      height: 350px;
+      border: 5px black solid;
+      overflow: hidden;
+      background-color: #DFF2FF;
+      display: flex;
+      align-items: center;
+    }
+
+    #circle {
+      width: 200px;
+      height: 200px;
+      background-color: #20A6FF;
+      border-radius: 50%;
+    }
+
+    #move {
+      background-color: gold;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 5px solid #333;
+      outline: none;
+    }
+    #move:hover {
+      background-color: coral;
+    }
+    #move:active {
+      background-color: yellowgreen;
+    }
